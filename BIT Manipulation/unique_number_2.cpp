@@ -34,4 +34,5 @@ int main() {
 	else{
 		cout<<new_res<<" "<<x;
 	}
+	return 0;
 }
