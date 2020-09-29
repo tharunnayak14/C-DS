@@ -10,24 +10,24 @@ int main() {
         cin >> ar[i];
         r = r ^ ar[i];
     }
-    //cout << r << "\n";
     int pos=0;
-    int t = r;
+    int old_result = r;
     while(r!=1)
     {
-        r= r >> 1;
+        r= r >> 1; // finds the pos of set bit in the result
         pos++;
     }
-    //cout << pos << "\n";
     int new_res = 0;
+    // now take xor of all elements which have a set bit at pos
     for (int i = 0; i < n;i++)
     {
-        if(ar[i]&(1<<pos)>0)
+        if(ar[i]&(1<<pos)>0) //1<<i mask
         {
-            new_res = new_res ^ ar[i];
+            new_res = new_res ^ ar[i]; //new_res has xor of all elements which have a set bit at pos
         }
     }
-	int x = new_res^t;
+    //now new_res has 1 element and for other take xor of new result and old_result
+	int x = new_res^old_result;
 	if(new_res>x){
 		cout<<x<<" "<<new_res;
 	}
