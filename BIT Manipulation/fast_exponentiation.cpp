@@ -7,8 +7,10 @@ long long int fast(int x, int n) {
         int last_bit = n & 1;
         if(last_bit)
         {
-            ans *= x;
+            ans *= x; // if last bit is set then multiply the ans with current value of x
         }
+        // next discard the last bit
+        // square the value of x
         n = n >> 1;
         x = x * x;
     }
