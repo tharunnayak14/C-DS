@@ -28,16 +28,38 @@ node* build_tree(){
     return root;
 }
 
-void print(node* root){
+void preorder_print(node* root){ // R L R (root left right)
     if(root == NULL){
         return;
     }
-    cout <<root->data;
-    print(root->left);
-    print(root->right);
+    cout <<root->data<<" ";
+    preorder_print(root->left);
+    preorder_print(root->right);
+}
+
+void print_inorder(node* root){ // left root right
+    if(root==NULL){
+        return;
+    }
+    print_inorder(root->left);
+    cout << root->data<<" ";
+    print_inorder(root->right);
+}
+
+void postorder_print(node* root){// left right root
+    if(root==NULL){
+        return;
+    }
+    postorder_print(root->left);
+    postorder_print(root->right);
+    cout << root->data<<" ";
 }
 int main(){
     node *root = build_tree();
-    print(root);
+    preorder_print(root);
+    cout << "\n";
+    print_inorder(root);
+    cout << "\n";
+    postorder_print(root);
     return 0;
 }
