@@ -6,7 +6,8 @@ int main() {
 
 	//Init of an array
 	int a[10] = {0};
-
+	int b[4] = {5}; // 5 0 0 0
+	//only 1st element is initialised
 	//Size of
 	cout << sizeof(a) << endl;
 	int n = sizeof(a) / sizeof(int);
