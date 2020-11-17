@@ -50,4 +50,10 @@ int main()
 
    vector<int> v;
    v.reserve(2000); // as doubling is expensive always reserve memory
+   
+   cout<<*max_element(v.begin(), v.end());
+   cout<<*min_element(v.begin(), v.end());
+   
+   return 0;
+   
 }
