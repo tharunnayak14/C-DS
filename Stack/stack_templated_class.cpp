@@ -2,9 +2,11 @@
 #include<vector>
 
 using namespace std;
+// generalize the code for all data types
 template <typename T>
 class stack{
 private:
+    // using data of type T
     vector<T> v;
 public:
     void push(T data){
@@ -22,15 +24,27 @@ public:
 
 };
 int main(){
-
+    // we should specify data type
+    // stack<T> s;
     stack<int> s;
     for (int i = 1; i < 6;i++){
         s.push(i * i);
     }
     while(!s.isempty()){
-        cout << s.top() << "\n";
+        cout << s.top() << " ";
         s.pop();
     }
+    
+    cout<<endl;
 
-        return 0;
+    stack<char> c;
+    for (char i = 65; i < 80;i++){
+        c.push(i);
+    }
+    while(!c.isempty()){
+        cout << c.top() << " ";
+        c.pop();
+    }
+
+    return 0;
 }
