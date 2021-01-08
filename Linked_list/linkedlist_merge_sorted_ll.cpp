@@ -40,14 +40,14 @@ void print(node* head){
     }
     cout << "\n";
 }
-node* take_input(int n){
+node* take_input(){
     int d;
-    cin >> d;
+    cin>>d;
     node *head = NULL;
-    while(n--){
+    while(d!=-1){
         insert(head, d);
         //insertTail(head, d);
-        cin >> d;
+        cin>>d;
     }
     return head;
 }
@@ -71,11 +71,8 @@ node * merge(node * a, node * b){
     return c;
 }
 int main(){
-    int x, y;
-    cin >> x;
-    node *head1 = take_input(x);
-    cin >> y;
-    node *head2 = take_input(y);
+    node *head1 = take_input();
+    node *head2 = take_input();
     print(head1);
     print(head2);
     node * newhead = merge(head1, head2);

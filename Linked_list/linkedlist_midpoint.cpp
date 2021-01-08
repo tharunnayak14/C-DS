@@ -42,12 +42,10 @@ void print(node* head){
 }
 node* take_input(){
     int d;
-    cin >> d;
     node *head = NULL;
-    while(d!=-1){
+    while(cin>>d){
         insert(head, d);
         //insertTail(head, d);
-        cin >> d;
     }
     return head;
 }

@@ -56,7 +56,7 @@ node* kth_pos_from_end(node* head, int k){
         return head;
     }
     node *slow = head;
-    node *fast;
+    node *fast = head;
     while(k--){
         fast = fast->next;
     }

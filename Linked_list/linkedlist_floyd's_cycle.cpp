@@ -114,10 +114,11 @@ node *break_cycle(node *head)
         f = f->next;
         s = s->next;
     }
-    node* n = s;
-    node*temp = n;
-    while(temp->next!=n){
-        temp=temp->next;
+    node *n = s;
+    node *temp = n;
+    while (temp->next != n)
+    {
+        temp = temp->next;
     }
     temp->next = NULL;
 }
@@ -128,5 +129,3 @@ int main()
     node *mid = midpoint(head);
     cout << mid->data;
 }
-
-  
