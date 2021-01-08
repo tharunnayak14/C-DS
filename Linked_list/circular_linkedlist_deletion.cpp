@@ -30,7 +30,7 @@ void insert_at_head(node*&head, int data){
 void print(node*head){
     node *temp = head;
     while(temp->next!=head){
-        cout << temp->data << " ->";
+        cout << temp->data << " -> ";
         temp = temp->next;
     }
     cout << temp->data << "\n";
@@ -43,6 +43,7 @@ node * getnode(node*head, int data){
         if(temp->data==data){
             return temp;
         }
+        temp=temp->next;
     }
     // for last node
     if(temp->data==data){
@@ -59,6 +60,7 @@ void deletenode(node*&head, int data){
         head = head->next;
     }
     node *temp = head;
+    //one step behind node to be deleted
     while(temp->next!=del){
         temp = temp->next;
     }
@@ -68,7 +70,7 @@ void deletenode(node*&head, int data){
 int main(){
     node *head = NULL;
     insert_at_head(head, 5);
-    insert_at_head(head, 2);
+    insert_at_head(head, 4);
     insert_at_head(head, 3);
     insert_at_head(head, 1);
     insert_at_head(head, 8);
@@ -78,5 +80,6 @@ int main(){
     deletenode (head, 3);
     print(head);
     deletenode (head, 8);
+    print(head);
     return 0;
 }

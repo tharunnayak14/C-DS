@@ -80,6 +80,15 @@ int main(){
     }
     cout << "\n";
 
+    
+    string s = "abcdef";
+    s.substr(4,6);
+    
+    string s1 = "762";
+    int x = stoi(s1);
+    
+    int y = 92;
+    string s2 = tostring(y);
     // for each loop
 
     for(char x:n){
