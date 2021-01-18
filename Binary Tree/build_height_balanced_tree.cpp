@@ -24,6 +24,8 @@ node * build_tree_from_array(int *a, int s,int e){
 
     root->left = build_tree_from_array(a, s, mid - 1);
     root->right = build_tree_from_array(a, mid + 1, e);
+
+    return root;
 }
 void bfs(node *root){
     queue<node*> q;
@@ -40,7 +42,7 @@ void bfs(node *root){
             }
         }
         else{
-            cout<<f->data<<",";
+            cout<<f->data<<" ";
             q.pop();
 
             if(f->left){

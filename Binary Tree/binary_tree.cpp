@@ -21,8 +21,11 @@ node* build_tree(){
         return NULL;
     }
     node * root = new node(d);// creating root
+
+    //recursively building left sub-tree
     root->left = build_tree();
 
+    //recursively building right sub-tree
     root->right = build_tree();
 
     return root;

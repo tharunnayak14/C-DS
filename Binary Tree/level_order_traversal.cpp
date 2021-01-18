@@ -54,6 +54,7 @@ void levelorder_print(node* root, int k){
     int i = 1;
     while(i<=k){
         print_kth_level(root, i);
+        cout<<endl;
         i++;
     }
 }

@@ -28,15 +28,19 @@ void reverse_recursive(stack<int>&s){
 int main(){
 
     stack<int> s;
-    for (int i = 1; i < 6;i++){
-        s.push(i * i);
+    int n;
+    cin>>n;
+    int k;
+    for(int i=0;i<n;i++){
+        cin>>k;
+        s.push(k);
     }
     reverse_recursive(s);
     while(!s.empty()){
-        cout << s.top() << " ";
+        cout << s.top() <<endl;
         s.pop();
     }
-    cout << "\n";
+
 
     return 0;
 }

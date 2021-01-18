@@ -1,0 +1,1 @@
+{"name":"Local: bst_deletion","url":"c:\\Users\\Tharun\\Desktop\\Open\\Data-structures\\BST\\bst_deletion.cpp","tests":[{"id":1610943089776,"input":"5 3 65 3 5 8 9 0 7 4 2 -1\n5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Tharun\\Desktop\\Open\\Data-structures\\BST\\bst_deletion.cpp","group":"local","local":true}

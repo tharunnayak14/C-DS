@@ -24,7 +24,7 @@ node* insert_in_BST(node* root, int d){
     if(root->data<d){
         root->right = insert_in_BST(root->right, d);
     }
-    else if(root->data>=d){
+    else{
        root->left =  insert_in_BST(root->left, d);
     }
     return root;
@@ -62,7 +62,7 @@ void bfs(node *root){
             }
         }
         else{
-            cout<<f->data<<",";
+            cout<<f->data<<" ";
             q.pop();
 
             if(f->left){

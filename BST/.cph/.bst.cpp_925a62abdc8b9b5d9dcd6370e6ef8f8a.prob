@@ -1,0 +1,1 @@
+{"name":"Local: bst","url":"c:\\Users\\Tharun\\Desktop\\Open\\Data-structures\\BST\\bst.cpp","tests":[{"id":1610939621101,"input":"5 3 2 4 1 8 7 9 6  -1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Tharun\\Desktop\\Open\\Data-structures\\BST\\bst.cpp","group":"local","local":true}

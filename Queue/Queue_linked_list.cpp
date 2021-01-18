@@ -44,5 +44,8 @@ int main(){
     q.push(88);
     q.push(8);
     cout << q.front->data<<"\n";
+    cout << q.rear->data<<"\n";
+    q.pop();
+    cout << q.front->data<<"\n";
     cout << q.rear->data;
 }
